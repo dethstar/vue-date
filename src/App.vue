@@ -5,7 +5,7 @@
         <select v-model="language" style="margin-bottom: 10px;">
             <option :value="item.value" v-for="item in langList" :key="item.value">{{item.label}}</option>
         </select>
-        <datepicker :language="language" v-model="selected" class="picker"></datepicker>
+        <datepicker :language="language" v-model="selected" class="picker" :icon="icon"></datepicker>
         <br>
         <h5>Selected date is : <b>{{selected}}</b></h5>
         <hr>
@@ -36,6 +36,7 @@
 
 <script>
     import datepicker from './Datepicker.vue'
+    import icon from "./calendar.svg"
     export default {
         name: 'Demo',
         data () {
@@ -53,6 +54,7 @@
                 end: '',
                 range: ['2016-01-01', '2016-01-11'],
                 init: '2016-12-26',
+		icon: icon,
                 event_date: {
                     date: '',
                     range: false

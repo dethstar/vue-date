@@ -5,6 +5,7 @@
             <transition name="fade">
                 <img class="cancel-btn" src="./cancel.png" v-show="showCancel" @click="clear">
             </transition>
+                <img class="cancel-btn" src="./calendar.svg" v-if="icon">
         </div>
         <transition name="toggle">
             <div class="date-panel" v-show="panelState" :style="coordinates">
@@ -153,6 +154,7 @@
             language: {default: 'en'},
             min: {default: '1970-01-01'},
             max: {default: '3016-01-01'},
+	    icon: {default: false},
             value: {
                 type: [String, Array],
                 default: ''
