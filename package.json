@@ -46,5 +46,7 @@
     "poi": "^10.1.5",
     "webpack-cli": "^2.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ajv": "^6.5.5"
+  }
 }

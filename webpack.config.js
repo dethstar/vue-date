@@ -1,7 +1,8 @@
 const path = require('path')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
-    mode: 'production',
+    plugins: [new VueLoaderPlugin()],
     entry: './src/Datepicker.vue',
     output: {
         path: path.resolve(__dirname, './lib'),
@@ -12,9 +13,12 @@ module.exports = {
     },
     module: {
         rules: [
-            {test: /\.vue$/, use: ['vue-loader']},
+            {test: /\.vue$/,
+		 use: ['vue-loader'],
+	    },
+	    {test: /\.less$/, use: ['vue-style-loader', 'css-loader','less-loader']},
             {test: /\.js$/, exclude: /node_modules/, use: ['babel-loader']},
-            {test: /\.(png|jpg)$/, use: [
+            {test: /\.(png|jpg|svg)$/, use: [
                 {
                     loader: 'url-loader',
                     query: {
