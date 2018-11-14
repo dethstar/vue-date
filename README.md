@@ -88,3 +88,5 @@ Use range mode or not. If  pass `true`, the binding value should be an Array  co
 
 ## Licence
 MIT
+
+The icon "calendar.svg" included in the /src folder is made by [smashicons](https://www.flaticon.com/authors/smashicons) from www.flaticon.com
